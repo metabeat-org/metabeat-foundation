@@ -4,49 +4,260 @@
 <title>METABEAT</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel=”shortcut icon” href="images/favicon.ico">
+<script  src="https://code.jquery.com/jquery-3.6.0.min.js"  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="  crossorigin="anonymous"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-<style>
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-    font-family: 'Montserrat', sans-serif; 
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-} 
-.intro { width: 100%; height: 100vh; background: url(images/bg.jpg) no-repeat; background-size: cover; }
-.intro:after { display: block; content: ''; width: 100%; height: 100vh; background-color: rgba(0,0,0,0.5); }
-.intro .msg { position: absolute; top: 50%; left: 50%; text-align: center; transform: translate(-50%, -50%); }
-.intro .msg h1 { font-size: 58px; letter-spacing: -0.025em; color: #fff; text-transform: uppercase; margin-bottom: 20px; text-indent: -0.025em;  }
-.intro .msg small { font-size: 18px; letter-spacing: 1em; color: #fff; text-transform: uppercase; text-indent: 1em; }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" >
+<link rel="stylesheet" type="text/css" href="css/metabeat.css">
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="js/metabeat.js"></script>
 </head>
 <body>
-    <section class="intro">
-        <div class="msg">
-            <h1>coming soon</h1>
-            <small>METABEAT</small>
-        </div>
-    </section>
+    <header>
+        <h1><a href="/"><img src="images/Metabeat_logo.png" alt="METABEAT"></a></h1>
+    </header>
+    <nav class="main-menu">
+        <button class="mobile-menu"><span>menu</span></button>
+        <button class="mobile-menu-close"><span>close</span></button>
+        <ul>
+            <li><a>About us</a></li>
+            <li><a>Service</a></li>
+            <li><a>Team & Partner</a></li>
+            <li><a>Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="main-top">
+            <div class="download-btn">
+                <button role="button">Download White Paper (EN)</button>
+                <button role="button">Download White Paper (KR)</button>
+            </div>
+        </section>        
+        <section class="experience">
+            <header>
+                <h2><span>EXPERIENCE</span> <span>NEW</span> <span>DISTANCE!</span></h2>
+                <small>ABOUT US<br>01</small>
+            </header>
+            <div>
+                <img src="images/Rectangle 1.jpg" alt="">
+                <p>METABEAT is NFT based F2E (Fan To Earn) Platform, where creators / artists and fans grow as partners through engagement and rewards.</p>
+                <p>With a growing number of NFT creations and users on platform, the partnerships between creators / artists and fans strengthen through the positive experience of symbiosis fueled by Metabeat ecosystem that reflects values and contributions by users in Metabeat communities.</p>
+                <p>Metabeat ecosystem places users as direct beneficiaries by tokenizing user contributions and their social influence through personal networks.</p>
+            </div>
+        </section>
+        <section class="dropthebeat">
+            <header>
+                <h2>
+                    <span>DROP</span> 
+                    <div class="swiper sprite1">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide"><img src="images/drop1.png" alt=""></li>
+                            <li class="swiper-slide"><img src="images/drop2.png" alt=""></li>
+                            <li class="swiper-slide"><img src="images/drop3.png" alt=""></li>
+                            <li class="swiper-slide"><img src="images/drop4.png" alt=""></li>
+                            <li class="swiper-slide"><img src="images/drop5.png" alt=""></li>
+                            <li class="swiper-slide"><img src="images/drop6.png" alt=""></li>
+                            <li class="swiper-slide"><img src="images/drop7.png" alt=""></li>
+                            <li class="swiper-slide"><img src="images/drop8.png" alt=""></li>
+                            <li class="swiper-slide"><img src="images/drop9.png" alt=""></li>
+                            <li class="swiper-slide"><img src="images/drop10.png" alt=""></li>
+                            <li class="swiper-slide"><img src="images/drop11.png" alt=""></li>                          
+                        </ul>
+                    </div>     
+                    <script>
+                    var swiper = new Swiper(".sprite1", {
+                        spaceBetween: 0,
+                        loop: true,
+                        autoplay: {
+                        delay: 1000,
+                            disableOnInteraction: false,
+                        },
+                    });
+                    </script>       
+                    <span>THE</span> 
+                    <span>BEAT!</span>
+                </h2>
+                <small>ABOUT US<br>02</small>
+            </header>
+            <div>
+                <ul>
+                    <li><img src="images/mamamoo.jpg" alt="MAMAMOO"></li>
+                    <li><img src="images/ONEUS.jpg" alt="ONEUS"></li>
+                    <li><img src="images/vromance.jpg" alt="VROMANCE"></li>
+                    <li><img src="images/purplekiss.jpg" alt="PURPLE KISS"></li>
+                    <li><img src="images/hwasa.jpg" alt="HWASA"></li>
+                </ul>
+                <strong>METABEAT = METAVERSE + BEAT</strong>
+                <p>Metabeat aims to become a leading F2E platform for innovative use cases by empowering the relationships between creators / artists and users and capturing values of their own social economies.</p>
+            </div>
+        </section>
+        
+       <section class="service">
+            <header>
+                <h2><img src="images/SERVICE.png" alt="SERVICE"></h2>
+                <small>METABEAT provides services<br>based on 3 core values.</small>
+            </header>
+            <div class="service-list">
+                <ul>
+                    <li>
+                        <a>
+                            <strong>SHARE</strong>
+                            <small><b>CORE 01</b>SERVICE<br>01</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <strong>SHOUT OUT</strong>
+                            <small><b>CORE 02</b>SERVICE<br>02</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <strong>ACTIVE CONTENTS</strong>
+                            <small><b>CORE 03</b>SERVICE<br>03</small>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+            <section class="royaltyshare">
+                <header>
+                    <h2>ROYALTY<br>SHARE</h2>
+                    <p>Direct Fan Ownership <br>in Creations.</p>
+                    <small>SERVICE<br>01</small>
+                </header>
+                <div>
+                    <video autoplay loop muted playsinline class="video-autoplay">
+                        <source src="video/video-royaltyshare.mp4" type="video/mp4">
+                    </video>
+                    <p>Start your journey as a true partner at ROYALTY SHARE.</p>
+                    <p>Through ROYALTY SHARE, you have direct access to own a piece of music IP or creative projects of your favorite creators / artists through NFT auctions.</p>
+                    <p>As a true partner and supporter, you will receive a portion of royalty generated from the ownership.  For those who wish to engage but do not wish to purchase NFT ownership, you can check out SUPPORT service for more interesting endorsement options.</p>
+                </div>
+            </section>
+
+            <section class="shoutout">
+                <header>
+                    <h2>SHOUT OUT</h2>
+                    <div>
+                        <span>DIRECT REWARD</span> 
+                        <div class="swiper sprite2">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide"><img src="images/shoutout1.png" alt=""></li>
+                                <li class="swiper-slide"><img src="images/shoutout2.png" alt=""></li>
+                                <li class="swiper-slide"><img src="images/shoutout3.png" alt=""></li>
+                                <li class="swiper-slide"><img src="images/shoutout4.png" alt=""></li>
+                                <li class="swiper-slide"><img src="images/shoutout5.png" alt=""></li>
+                                <li class="swiper-slide"><img src="images/shoutout6.png" alt=""></li>
+                                <li class="swiper-slide"><img src="images/shoutout7.png" alt=""></li>
+                                <li class="swiper-slide"><img src="images/shoutout8.png" alt=""></li>
+                                <li class="swiper-slide"><img src="images/shoutout9.png" alt=""></li>
+                                <li class="swiper-slide"><img src="images/shoutout10.png" alt=""></li>
+                                <li class="swiper-slide"><img src="images/shoutout11.png" alt=""></li>                          
+                            </ul>
+                        </div>     
+                        <script>
+                        var swiper = new Swiper(".sprite2", {
+                            spaceBetween: 0,
+                            loop: true,
+                            autoplay: {
+                            delay: 1000,
+                                disableOnInteraction: false,
+                            },
+                        });
+                        </script>  
+                        <span>to Fan <br>Marketing.</span>
+                    </div>
+                    <small>SERVICE<br>02</small>
+                </header>
+                <div class="content">
+                    <video autoplay loop muted playsinline class="video-autoplay">
+                        <source src="video/video-shoutout.mp4" type="video/mp4">
+                    </video>
+                    <p><b>SHOUTOUT your beat!</b> SHOUTOUT is a fan engagement reward service.</p>
+                    <p>Through SHOUTOUT, you can receive tokenized rewards for participating in promotion and marketing activities for your favorite creators / artists.</p>
+                    <p>After registering your personal SNS accounts such as Twitter, Tik Tok, Facebook, and Instagram on Metabeat platform, participate in Contests and Challenges under SHOUTOUT, and receive Metabeat token rewards.</p>
+                </div>
+            </section>
+
+            <section class="activecontents">
+                <header>
+                    <h2>ACTIVE<br>CONTENTS</h2>
+                    <div>
+                        <span>DIRECT REWARD</span> 
+                        <span>Creation</span>
+                        <span>Trades.</span>
+                    </div>
+                    <small>SERVICE<br>03</small>
+                </header>
+                <div>
+                    <video autoplay loop muted playsinline class="video-autoplay">
+                        <source src="video/video-activecontents.mp4" type="video/mp4">
+                    </video>
+                    <p>Inspired by your artists? Show your creativity at Metabeat marketplace!</p>
+                    <p>ACTIVE CONTENTS is a gallery and marketplace to show, share and trade your NFT.<br>You can put your NFTs up for sales on marketplace.</p>
+                    <p>Trade your NFTs acquired from Metabeat AUCTION with other users.  You can also turn your fan arts into NFT after validation and show, share and trade them on marketplace.</p>
+                </div>
+            </section>           
+
+        </section>
+
+        <section class="contact">
+            <header><img src="images/Metabeat_logo.png" alt="METABEAT">Contact</header>
+            <div class="marquee-horizontal">
+                <div class="marquee-horizontal-alt-css w-embed">
+                    <style>
+                        .track-horizontal-alt {
+                            position: absolute;
+                            white-space: nowrap;
+                            will-change: transform;
+                            animation: marquee-horizontal-alt 50s linear infinite;  
+                            /* manipulate the speed of the marquee by changing "40s" line above*/
+                        }                    
+                        @keyframes marquee-horizontal-alt {
+                        from { transform: translateX(0); }
+                        to { transform: translateX(-50%); }
+                        }                
+                    </style>
+                </div>
+                <div class="track-horizontal-alt">
+                    <a class="marquee-text" href="mailto:metabeat@metabeat.io">metabeat@metabeat.io</a>
+                    <a class="marquee-text" href="javascript:alert('coming soon.');" onfocus="this.blur()">Facebook</a>
+                    <a class="marquee-text" href="javascript:alert('coming soon.');" onfocus="this.blur()">Twitter</a>
+                    <a class="marquee-text" href="javascript:alert('coming soon.');" onfocus="this.blur()">Instagram</a>
+                    <a class="marquee-text" href="javascript:alert('coming soon.');" onfocus="this.blur()">Telegram</a>
+                    <a class="marquee-text" href="mailto:metabeat@metabeat.io">metabeat@metabeat.io</a>
+                    <a class="marquee-text" href="javascript:alert('coming soon.');" onfocus="this.blur()">Facebook</a>
+                    <a class="marquee-text" href="javascript:alert('coming soon.');" onfocus="this.blur()">Twitter</a>
+                    <a class="marquee-text" href="javascript:alert('coming soon.');" onfocus="this.blur()">Instagram</a>
+                    <a class="marquee-text" href="javascript:alert('coming soon.');" onfocus="this.blur()">Telegram</a>
+                    <a class="marquee-text" href="mailto:metabeat@metabeat.io">metabeat@metabeat.io</a>
+                    <a class="marquee-text" href="javascript:alert('coming soon.');" onfocus="this.blur()">Facebook</a>
+                    <a class="marquee-text" href="javascript:alert('coming soon.');" onfocus="this.blur()">Twitter</a>
+                    <a class="marquee-text" href="javascript:alert('coming soon.');" onfocus="this.blur()">Instagram</a>
+                    <a class="marquee-text" href="javascript:alert('coming soon.');" onfocus="this.blur()">Telegram</a>
+                    <a class="marquee-text" href="mailto:metabeat@metabeat.io">metabeat@metabeat.io</a>
+                    <a class="marquee-text" href="javascript:alert('coming soon.');" onfocus="this.blur()">Facebook</a>
+                    <a class="marquee-text" href="javascript:alert('coming soon.');" onfocus="this.blur()">Twitter</a>
+                    <a class="marquee-text" href="javascript:alert('coming soon.');" onfocus="this.blur()">Instagram</a>
+                    <a class="marquee-text" href="javascript:alert('coming soon.');" onfocus="this.blur()">Telegram</a>
+                </div>
+            </div>
+            <button role="button" class="top-btn"><img src="images/ico-top.png" alt="UP"></button>
+            <p class="copy">&copy;2022, Metabeat designed by Finngram, All right reserved.</p>
+            <video autoplay loop muted playsinline class="video-autoplay">
+                <source src="video/bottom-bg.mp4" type="video/mp4">
+            </video>
+        </section>
+    </main>
+
+    <img src="images/img-royal-share.png" alt="" id="cursor1" >
+    <img src="images/img-shout-out.png" alt="" id="cursor2">
+    <img src="images/img-active-contents.png" alt="" id="cursor3">
+
 </body>
 </html>
