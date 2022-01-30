@@ -21,7 +21,6 @@ time, mark, audio, video {
     font-size: 36px;
     font-style: normal;
     font-weight: 400;
-    line-height: 52px;
     letter-spacing: -0.03em;
 }
 /* HTML5 display-role reset for older browsers */
@@ -36,10 +35,10 @@ video { -webkit-mask-image: -webkit-radial-gradient(white, black);
     -webkit-backface-visibility: hidden; 
     -moz-backface-visibility: hidden; }
 body { background-color: #F1F0EC; overflow-x: hidden; }
-body > header { position: absolute; top: 48px; left: 0; width: 100%; z-index: 2; }
+body > header { position: absolute; top: 48px; left: 0; width: 100%; z-index: 200; }
 body > header h1 { width: 299px; margin: 0 auto; }
 body > header h1 img { display: block; }
-body > nav { position: absolute; top: 115px; left: 50%; width: 100%; transform: translateX(-50%); z-index: 2; } 
+body > nav { position: absolute; top: 115px; left: 50%; width: 100%; transform: translateX(-50%); z-index: 200; } 
 body > nav .mobile-menu,
 body > nav .mobile-menu-close { display: none; }
 body > nav ul { text-align: center; font-size: 0; }
@@ -50,6 +49,7 @@ body > nav ul li:after {
     position: absolute; bottom: -4px; left: 50%;
     display: inline-block; content: ''; width: 0; height: 1px; background-color: #000; transition: all 0.3s;
 }
+body > nav ul li.active:after { left: 0%; width: 100%; }
 body > nav ul li:hover:after { left: 0%; width: 100%; }
 body > nav ul li a { display: block;
     font-size: 23px; 
@@ -58,6 +58,11 @@ body > nav ul li a { display: block;
     text-align: left;
  }
  body > nav.fixed { position: fixed; top: 48px; z-index: 10; } 
+ body > nav.main-menu.fixed { 
+    padding: 48px 0;
+    background-color: rgba(241,240,236,1);
+    top: 0;
+}  
 
 .main-top { width: 100%; height: 100vh; background: url(../images/b.gif) no-repeat center; }
 /*
@@ -88,14 +93,15 @@ body > nav ul li a { display: block;
     font-weight: 700;
     line-height: 17px;
     text-align: center;
-    padding: 17.5px 35px;
     border: 2px solid #000000;
     box-sizing: border-box;
     border-radius: 25px;
     margin: 10px auto 0 auto;
 }
+.bgvideo { position: absolute; top: 100vh; left: 0; width: 100%; }
+.bgvideo video { display: block; width: 100%; z-index: 1;} 
 main { background: url(../images/bg-exprerience.jpg) no-repeat; background-position: center 100vh;
-background-size: 100% auto; }
+background-size: 100% auto; position: relative; z-index: 2;}
 section { position: relative; }
 
 .experience { 
@@ -122,23 +128,23 @@ section { position: relative; }
 .dropthebeat > div ul.active li { animation: scrollShow 0.5s; animation-fill-mode: forwards; }
 .dropthebeat > div ul li:nth-child(1) { 
     position: absolute; top: 49px; left: 0; 
-    animation-delay: 0.1s;
+    animation-delay: 0.9s;
 }
 .dropthebeat > div ul li:nth-child(2) { 
     position: absolute; bottom: 0; left: 326px; z-index: 2; 
-    animation-delay: 0.5s;
+    animation-delay: 1.3s;
 }
 .dropthebeat > div ul li:nth-child(3) {
     position: absolute; top: 132px; left: 50%; margin-left: -67px; z-index: 1; 
-    animation-delay: 0.3s;
+    animation-delay: 1.1s;
 }
 .dropthebeat > div ul li:nth-child(4) {
     position: absolute; top: 0; right: 0; z-index: 0;
-     animation-delay: 0.2s;
+     animation-delay: 1.0s;
 }
 .dropthebeat > div ul li:nth-child(5) {
     position: absolute; bottom: 115px; right: 101px; z-index: 0;
-    animation-delay: 0.4s;
+    animation-delay: 1.2s;
 }
 
 @keyframes scrollShow {
@@ -162,8 +168,10 @@ section { position: relative; }
 .service > header h2 img { display: block; width: 100%; }
 .service > header small { display: inline-block; vertical-align: top; }
 .service .service-list { width: 100%; padding-left: 491px; position: relative; z-index: 10; box-sizing: border-box; }
+.service .service-list ul li { margin-bottom: 16px; }
+.service .service-list ul li:last-child { margin-bottom: 0; }
 .service .service-list ul li a { display: block; position: relative; }
-.service .service-list ul li a strong { font-weight: 500; font-size: 120px; line-height: 146px; opacity: 0.3; transition: all 0.3s; padding-right: 90px; }
+.service .service-list ul li a strong { font-weight: 500; font-size: 120px; line-height: 121.3333%; opacity: 0.3; transition: all 0.3s; padding-right: 90px; text-transform: uppercase; }
 .service .service-list ul li a:hover strong { opacity: 1; }
 .service .service-list ul li a small { position: absolute; top: 51px; right: 0; width: 70px; font-weight: 500; font-size: 16px; line-height: 20px; letter-spacing: -0.03em; }
 .service .service-list ul li a small b { display: block; font-weight: bold; font-size: 16px; line-height: 20px; letter-spacing: -0.03em; margin-bottom: 9px; }
@@ -360,6 +368,7 @@ small {
 }
 @media screen and ( max-width: 1700px ) {
     .main-top { background: url(../images/b.gif) no-repeat center; background-size: 66% auto; }
+    .main-top .download-btn { bottom: 50px; }
     .experience {
         padding: 308px 60px 295px 60px;
     }
@@ -418,7 +427,6 @@ small {
     .service > header h2 { max-width: 800px;  } 
     .service .service-list ul li a strong {
         font-size: 100px;
-        line-height: 120px;
     }    
     .service .service-list ul li a small { top: 21px; }
 
@@ -454,7 +462,6 @@ small {
     .service > header h2 { max-width: 760px; }
     .service .service-list ul li a strong {
         font-size: 90px;
-        line-height: 110px;
     }
     .dropthebeat header small {
         position: absolute;
@@ -557,8 +564,8 @@ small {
     .service .shoutout header small { top: inherit; left: 456px; bottom: -10px; right: inherit; text-align: left; margin: 0; }
     
     .service .shoutout .content { width: 100%; height: inherit; position: relative; overflow: hidden; }
-    .service .shoutout .content video { width: 100%; height: inherit; position: relative; left: inherit; transform: none; }
-    .service .shoutout .content video + p { position: relative; top: inherit; left: 0;  width: 380px; margin-top: -291px; margin-bottom: 0; }
+    .service .shoutout .content video { width: 1876px; height: inherit; position: relative; }
+    .service .shoutout .content video + p { position: relative; top: inherit; left: 0;  width: 429px; margin-top: -291px; margin-bottom: 0; }
     .service .shoutout .content video + p + p { position: relative; top: inherit; right: 0;  width: 641px; margin-top: 53px; padding-left: 447px; }
     .service .shoutout .content video + p + p + p { position: relative; bottom: inherit; left: 0;  width: 100%; margin-top: 104px; padding: 0; }
     
@@ -627,6 +634,8 @@ small {
         text-align: left;
         margin: 0;
     }    
+    .service .shoutout .content video { width: 93.8vw; height: inherit; position: relative; }
+
 }
 
 @media screen and ( max-width: 1024px ) {
@@ -753,14 +762,19 @@ small {
         font-size: 12px;
         line-height: 18px;
     }    
-
     body > header h1 { width: 170px; margin: 0 auto; }
     body > header h1 img { display: block; width: 100%; }
-    body > nav { position: fixed; top: 88px; } 
+    body > nav { position: fixed; top: 88px; transition: all 0.3s; } 
+
+    body > nav.main-menu.fixed { 
+        padding: 48px 0 20px 0; 
+    }    
+
     body > nav .mobile-menu { 
         width: 24px; display: block; margin: 0 auto; 
-        padding: 0; border: none; background: none; transition: all 0.3s;
+        padding: 0; border: none; background: none; transition: all 0.3s;        
     }
+
     body > nav .mobile-menu span { 
         display: block; width: 100%; height: 2px; margin: 4px 0; background-color: #000;
         overflow: hidden; text-indent: -1000px;
@@ -771,8 +785,9 @@ small {
     body > nav .mobile-menu-close { 
         width: 16px; height: 16px; display: block; 
         position: absolute; top: 12px; left: 50%; transform: translateX(-50%);
-        padding: 0; border: none; z-index: 100; background: none; display: none;
+        padding: 0; border: none; z-index: 200; background: none; display: none;
     }
+    body > nav.main-menu.fixed .mobile-menu-close { top: 60px;}
     body > nav .mobile-menu-close span { display: none; }
     body > nav .mobile-menu-close:before, 
     body > nav .mobile-menu-close:after { position: absolute; top: -2px; left: 50%; content:''; height: 20px; width: 2px; background-color: #000; margin-left: -1px; } 
@@ -781,16 +796,22 @@ small {
 
     body > nav ul { 
         display: none;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
         width: 233px;
         height: 268px;
         background: #fff;
         border-radius: 8px;
-        margin: -14px auto 0 auto;
-        position: relative;
-        z-index: 99;
+        z-index: 100;
         padding: 60px 0 20px 0;
         box-sizing: border-box;
+        filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.08));
     }
+    body > nav.main-menu.fixed ul {
+        top: 48px;
+    }  
     body > nav ul li { display: block; margin-right: 0; margin-bottom: 36px; position: relative;}
     body > nav ul li:after { display: none; }
     body > nav ul li:last-child { margin-bottom: 0; }
@@ -820,9 +841,11 @@ small {
     }
     main { 
         max-width: 100%;
+        /*
         background: url(../images/bg-exprerience-mobile.jpg) no-repeat; 
         background-position: center 100vh;
         background-size: 100% auto;
+        */
     }  
     
     .experience { padding: 49px 24px 170px 24px; max-width: 100%; }
@@ -831,30 +854,30 @@ small {
     .experience header span:nth-child(2) { padding-left: 184px; }
     .experience header span:nth-child(3) { padding-left: 64px; }
     .experience small { position: absolute; bottom: 0; right: 0; text-align: right; }
-    .experience div { padding: 0 0 0 64px; }
+    .experience div { padding: 0 0 0 44px; }
     .experience div > img { width: 100%; display: block; margin-bottom: 16px; }
     
     .dropthebeat { padding: 0 24px; position: relative; margin: 0 auto; box-sizing: border-box; padding-bottom: 192px; }
     .dropthebeat header { height: 75px; position: relative; margin-bottom: 62px; }
     .dropthebeat header span { position: relative; margin-bottom: 0; }
-    .dropthebeat header span + div + script + span + span { bottom: 0; left: 188px; right: inherit; }
+    .dropthebeat header span + div + script + span + span { position: absolute; bottom: 0; left: 188px; right: inherit; }
     .dropthebeat header small { position:absolute; bottom: -32px; left: 245px; right: inherit; text-align: right; }
     .dropthebeat > div { text-align: center; }
     .dropthebeat > div ul { position: relative; width: 341px; height: 193px; margin: 0 auto; }
     .dropthebeat > div ul li img { display: block; }
-    .dropthebeat > div ul li:nth-child(1) { top: 10px; left: 0; width: 131px; }
-    .dropthebeat > div ul li:nth-child(2) { bottom: 0; left: 67px; width: 107px; }
-    .dropthebeat > div ul li:nth-child(3) { top: 27px; left: 155px; width: 83px; }
-    .dropthebeat > div ul li:nth-child(4) { top: 0; right: 0; width: 125px; }
-    .dropthebeat > div ul li:nth-child(5) { bottom: 24px; right: 20px; width: 88px; }
+    .dropthebeat > div ul li:nth-child(1) { top: 10px; left: 0; width: 131px; animation-delay: 0.6s; }
+    .dropthebeat > div ul li:nth-child(2) { bottom: 0; left: 67px; width: 107px; animation-delay: 1s;}
+    .dropthebeat > div ul li:nth-child(3) { top: 27px; left: 155px; width: 83px; animation-delay: 0.8s;}
+    .dropthebeat > div ul li:nth-child(4) { top: 0; right: 0; width: 125px; animation-delay: 0.7s;}
+    .dropthebeat > div ul li:nth-child(5) { bottom: 24px; right: 20px; width: 88px; animation-delay: 0.9s;}
     .dropthebeat > div strong { display: block; font-weight: 600; font-size: 12px; line-height: 20px; margin: 93px 0 20px 0; }
     .dropthebeat > div p { max-width: 100%; }    
  
-    .dropthebeat > div ul.active li { opacity: 0; animation: scrollShowm 0.5s; animation-fill-mode: forwards; }
+    
     @keyframes scrollShowm {
         from {
             opacity: 0;
-            transform: translateY(-50px);
+            transform: translateY(-30px);
         }
         to {
             opacity: 1;
@@ -953,4 +976,12 @@ small {
 
     /*#cursor1, #cursor2, #cursor3 { display: none; }*/
 
+}
+
+@media screen and ( max-width: 420px ) {
+    .dropthebeat header span + div + script + span + span { position: relative; bottom: inherit; left: inherit; }
+    .dropthebeat header small { bottom: -28px; left: 60px; }
+}
+@media screen and ( max-width: 402px ) {
+    .dropthebeat header small { left: 140px; }
 }
