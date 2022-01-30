@@ -821,7 +821,7 @@ small {
         text-align: center;
      }
      body > nav.fixed { position: fixed; top: 44px; z-index: 10; } 
-    .main-top { width: 100%; height: 100vh; background: url(../images/b.gif) no-repeat center;
+    .main-top { width: 100%; height: calc(100vh - 60px); background: url(../images/b.gif) no-repeat center;
         background-size: 200% auto;
     }
     .main-top .download-btn { position: absolute; bottom: 88px; left: 0; width: 100%; }
