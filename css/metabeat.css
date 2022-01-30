@@ -98,12 +98,9 @@ body > nav ul li a { display: block;
     border-radius: 25px;
     margin: 10px auto 0 auto;
 }
-.bgvideo { position: absolute; top: 100vh; left: 0; width: 100%; }
-.bgvideo video { display: block; width: 100%; z-index: 1;} 
 main { background: url(../images/bg-exprerience.jpg) no-repeat; background-position: center 100vh;
-background-size: 100% auto; position: relative; z-index: 2;}
+background-size: 100% auto; }
 section { position: relative; }
-
 .experience { 
     padding: 308px 85px 295px 85px;     
     position: relative; margin: 0 auto; box-sizing: border-box; }
@@ -178,7 +175,7 @@ section { position: relative; }
 
 #cursor1,
 #cursor2,
-#cursor3 { position: absolute; top: 0; left: 0; display: none; transform: translate(-50%, -50%); }
+#cursor3 { position: absolute; top: 0; left: 0; display: none; transform: translate(-50%, -50%); z-index: 1;}
 
 .service .royaltyshare { margin-top: 467px; } 
 .service .shoutout { margin-top: 463px; } 
